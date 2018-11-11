@@ -1,0 +1,54 @@
+# docker pull jupyter/all-spark-notebook
+# https://jupyter-docker-stacks.readthedocs.io/en/latest/using/common.html?highlight=root
+
+version: "3.7"
+services:
+  pyspark:
+    image: jupyter/all-spark-notebook:latest
+    ports:
+    - "8888:8888/tcp"
+    - "4040:4040/tcp"
+    networks:
+    - pyspark-net
+    working_dir: /home/$USER/work
+    environment:
+      CHOWN_HOME: "yes"
+      GRANT_SUDO: "yes"
+      NB_UID: 1000
+      NB_GID: 100
+      NB_USER: $USER
+      NB_GROUP: staff
+    user: root
+    deploy:
+     replicas: 1
+     restart_policy:
+       condition: on-failure
+    volumes:
+    - $PWD/work:/home/$USER/work
+  postgres:
+    image: postgres:10.5
+    environment:
+      POSTGRES_USERNAME: postgres
+      POSTGRES_PASSWORD: postgres1234
+      POSTGRES_DB: demo
+    ports:
+    - "5432:5432/tcp"
+    networks:
+    - pyspark-net
+    volumes:
+    - $HOME/data/postgre:/var/lib/postgresql/data
+    deploy:
+     restart_policy:
+       condition: on-failure
+  adminer:
+    image: adminer:latest
+    ports:
+    - "8080:8080/tcp"
+    networks:
+    - pyspark-net
+    deploy:
+     restart_policy:
+       condition: on-failure
+
+networks:
+  pyspark-net:
