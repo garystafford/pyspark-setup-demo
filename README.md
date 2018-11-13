@@ -4,7 +4,7 @@ Demo of PySpark and Jupyter Notebook with Jupyter Docker Stacks.
 
 ## Set-up
 
-1. Git Clone project from GitHub
+1. `git clone` this project from GitHub
 2. Create `$HOME/data/postgre` directory for PostgreSQL files
 3. Deploy Docker Stack: `docker stack deploy -c stack.yml pyspark`
 4.  Download 'BreadBasket_DMS.csv' from [kaggle](https://www.kaggle.com/xvivancos/transactions-from-a-bakery) to `work/` directory
