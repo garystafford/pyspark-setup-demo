@@ -1,12 +1,36 @@
+# PySpark / Jupyter Notebook Demo
+
+Demo of PySpark and Jupyter Notebook with Jupyter Docker Stacks.
+
+## Set-up
+
+1.  Deploy Docker Stack: 'docker stack deploy -c stack.yml pyspark'
+2.  Download 'BreadBasket_DMS.csv' from [kaggle](https://www.kaggle.com/xvivancos/transactions-from-a-bakery) to work directory
+3.  From Jupyter terminal, install [Psycopg](http://initd.org/psycopg/docs/install.html#) Python PostgreSQL adapter: 'pip install psycopg2 psycopg2-binary'
+
+## Demo
+
+From a Jupyter terminal window:
+
+1.  Sample Python script: 'python ./01_simple_script.py'
+2.  Sample PySpark script: 'python ./02_basket_dataframes.py'
+3.  Load PostgreSQL sample data: 'python ./03_load_sql.py'
+4.  Sample Jupyter Notebook: 'python ./04_pyspark_demo_notebook.ipynb'
+
+## Misc. Commands
+
 ```bash
 docker pull jupyter/all-spark-notebook:latest
-docker stack deploy -c stack.yml pyspark
 docker stack ps pyspark --no-trunc
 docker logs $(docker ps | grep pyspark_pyspark.1 | awk '{print $NF}') --follow
 
+# optional from Jupyter terminal if not part of SparkSession spark.driver.extraClassPath
 cp postgresql-42.2.5.jar /usr/local/spark/jars
 ```
 
-https://jdbc.postgresql.org/download.html
-https://spark.apache.org/docs/latest/sql-programming-guide.html#jdbc-to-other-databases
-https://stackoverflow.com/a/46944727/580268
+## References
+
+[PostgreSQL JDBC Driver
+](https://jdbc.postgresql.org/download.html)
+[Spark SQL, DataFrames and Datasets Guide
+Spark](https://spark.apache.org/docs/latest/sql-programming-guide.html#jdbc-to-other-databases)
