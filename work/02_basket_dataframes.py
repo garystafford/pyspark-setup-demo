@@ -20,9 +20,9 @@ bakery_schema = StructType([
 ])
 
 df3 = spark.read \
-    .format("csv") \
-    .option("header", "true") \
-    .load("BreadBasket_DMS.csv", schema=bakery_schema)
+    .format('csv') \
+    .option('header', 'true') \
+    .load('BreadBasket_DMS.csv', schema=bakery_schema)
 
 df3.show(10)
 df3.count()
