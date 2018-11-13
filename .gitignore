@@ -2,3 +2,5 @@ venv/
 .idea/
 work/spark-warehouse/
 work/.ipynb_checkpoints/
+work/spark-warehouse/
+work/output/
