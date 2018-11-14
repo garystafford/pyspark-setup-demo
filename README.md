@@ -1,6 +1,6 @@
 # PySpark / Jupyter Notebook Demo
 
-Demo of PySpark and Jupyter Notebook with Jupyter Docker Stacks.
+Demo of [PySpark](http://spark.apache.org/docs/2.4.0/api/python/pyspark.html) and [Jupyter Notebook](http://jupyter.org/) with the [Jupyter Docker Stacks](https://jupyter-docker-stacks.readthedocs.io/en/latest/).
 
 <img src="https://programmaticponderings.files.wordpress.com/2018/11/pysparkdocker.png" alt="Architecture" width="700"/>
 
