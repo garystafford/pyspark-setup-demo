@@ -2,6 +2,8 @@
 
 Demo of PySpark and Jupyter Notebook with Jupyter Docker Stacks.
 
+<img src="https://programmaticponderings.files.wordpress.com/2018/11/pysparkdocker.png" alt="Architecture" width="700"/>
+
 ## Set-up
 
 1. `git clone` this project from GitHub
@@ -17,7 +19,9 @@ From a Jupyter terminal window:
 1.  Sample Python script: `python ./01_simple_script.py`
 2.  Sample PySpark script: `$SPARK_HOME/bin/spark-submit 02_bakery_dataframes.py`
 3.  Load PostgreSQL sample data: `python ./03_load_sql.py`
-4.  Sample Jupyter Notebook: Open `04_pyspark_demo_notebook.ipynb` from Jupyter Console
+4.  Sample Jupyter Notebook: open `04_pyspark_demo_notebook.ipynb` from Jupyter Console
+
+<img src="https://programmaticponderings.files.wordpress.com/2018/11/pyspark_article_11_notebook_container.png" alt="Jupyter Notebook" width="800"/>
 
 ## Misc. Commands
 
