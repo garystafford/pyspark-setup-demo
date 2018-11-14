@@ -15,7 +15,7 @@ Demo of PySpark and Jupyter Notebook with Jupyter Docker Stacks.
 From a Jupyter terminal window:
 
 1.  Sample Python script: `python ./01_simple_script.py`
-2.  Sample PySpark script: `python ./02_basket_dataframes.py`
+2.  Sample PySpark script: `python ./02_bakery_dataframes.py`
 3.  Load PostgreSQL sample data: `python ./03_load_sql.py`
 4.  Sample Jupyter Notebook: `python ./04_pyspark_demo_notebook.ipynb`
 
