@@ -32,7 +32,7 @@ cp postgresql-42.2.5.jar /usr/local/spark/jars
 
 ## References
 
-[PostgreSQL JDBC Driver
+* [PostgreSQL JDBC Driver
 ](https://jdbc.postgresql.org/download.html)
-[Spark SQL, DataFrames and Datasets Guide
+* [Spark SQL, DataFrames and Datasets Guide
 Spark](https://spark.apache.org/docs/latest/sql-programming-guide.html#jdbc-to-other-databases)
