@@ -40,3 +40,4 @@ cp postgresql-42.2.5.jar /usr/local/spark/jars
 ](https://jdbc.postgresql.org/download.html)
 * [Spark SQL, DataFrames and Datasets Guide
 Spark](https://spark.apache.org/docs/latest/sql-programming-guide.html#jdbc-to-other-databases)
+* [Lesson 42: Interactive plotting with Bokeh](http://justinbois.github.io/bootcamp/2017/lessons/l42_bokeh.html)
