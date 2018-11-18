@@ -33,8 +33,10 @@ docker logs $(docker ps | grep pyspark_pyspark.1 | awk '{print $NF}') --follow
 docker stats --format \
   "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}"
 
-apt-get update && apt-get install htop
-
+apt-get update -y && apt-get upgrade -y
+apt-get install htop
+htop --sort-key help
+htop --sort-key
 # optional from Jupyter terminal if not part of SparkSession spark.driver.extraClassPath
 cp postgresql-42.2.5.jar /usr/local/spark/jars
 ```
