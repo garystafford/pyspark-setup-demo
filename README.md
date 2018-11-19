@@ -1,6 +1,7 @@
 # PySpark / Jupyter Notebook Demo
 
-Demo of [PySpark](http://spark.apache.org/docs/2.4.0/api/python/pyspark.html) and [Jupyter Notebook](http://jupyter.org/) with the [Jupyter Docker Stacks](https://jupyter-docker-stacks.readthedocs.io/en/latest/).
+Demo of [PySpark](http://spark.apache.org/docs/2.4.0/api/python/pyspark.html) and [Jupyter Notebook](http://jupyter.org/) with the [Jupyter Docker Stacks](https://jupyter-docker-stacks.readthedocs.io/en/latest/). Complete information for this project can be found by reading the related blog post, [Getting Started with PySpark for Big Data Analytics, using Jupyter Notebooks and Docker
+](wp.me/p1RD28-61V)
 
 <img src="https://programmaticponderings.files.wordpress.com/2018/11/pysparkdocker1.png" alt="Architecture" width="700"/>
 
@@ -48,5 +49,4 @@ cp postgresql-42.2.5.jar /usr/local/spark/jars
 -   [Spark SQL, DataFrames and Datasets Guide
     Spark](https://spark.apache.org/docs/latest/sql-programming-guide.html#jdbc-to-other-databases)
 -   [Lesson 42: Interactive plotting with Bokeh](http://justinbois.github.io/bootcamp/2017/lessons/l42_bokeh.html)
-
 -   [How to use SparkSession in Apache Spark 2.0](https://databricks.com/blog/2016/08/15/how-to-use-sparksession-in-apache-spark-2-0.html)
