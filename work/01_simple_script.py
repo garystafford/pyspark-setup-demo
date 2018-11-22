@@ -2,7 +2,8 @@
 
 import random
 
-technologies = ['PySpark', 'Python', 'Spark', 'Scala', 'JVM', 'Project Jupyter', 'PostgreSQL']
+technologies = ['PySpark', 'Python', 'Spark', 'Scala',
+                'JVM', 'Project Jupyter', 'PostgreSQL']
 print("Technologies: %s" % technologies)
 
 technologies.sort()
