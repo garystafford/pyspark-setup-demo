@@ -8,7 +8,6 @@ spark = SparkSession \
     .appName('pyspark_demo_app') \
     .config('spark.driver.extraClassPath',
             '/home/garystafford/work/postgresql-42.2.5.jar') \
-    .master("local[*]") \
     .getOrCreate()
 
 bakery_schema = StructType([
