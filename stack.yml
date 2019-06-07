@@ -1,5 +1,5 @@
-# docker pull jupyter/all-spark-notebook
 # https://jupyter-docker-stacks.readthedocs.io/en/latest/using/common.html?highlight=root
+# easier to first docker pull jupyter/all-spark-notebook:latest
 
 version: "3.7"
 services:
@@ -26,7 +26,7 @@ services:
     volumes:
     - $PWD/work:/home/$USER/work
   postgres:
-    image: postgres:10.5
+    image: postgres:11.3
     environment:
       POSTGRES_USERNAME: postgres
       POSTGRES_PASSWORD: postgres1234

@@ -8,10 +8,10 @@ Demo of [PySpark](http://spark.apache.org/docs/2.4.0/api/python/pyspark.html) an
 ## Set-up
 
 1.  `git clone` this project from GitHub
-2.  Create `$HOME/data/postgre` directory for PostgreSQL files
+2.  Create `$HOME/data/postgres` directory for PostgreSQL files
 3.  Deploy Docker Stack: `docker stack deploy -c stack.yml pyspark`
 4.  Download 'BreadBasket_DMS.csv' from [kaggle](https://www.kaggle.com/xvivancos/transactions-from-a-bakery) to `work/` directory
-5.  From Jupyter terminal, install [Psycopg](http://initd.org/psycopg/docs/install.html#) Python PostgreSQL adapter: `pip install psycopg2 psycopg2-binary`
+5.  From Jupyter terminal, install [Psycopg](http://initd.org/psycopg/docs/install.html#) Python PostgreSQL adapter: `pip install psycopg2-binary`
 
 ## Demo
 
@@ -29,7 +29,7 @@ From a Jupyter terminal window:
 ```bash
 docker pull jupyter/all-spark-notebook:latest
 docker stack ps pyspark --no-trunc
-docker logs $(docker ps | grep _pyspark | awk '{print $NF}') --follow
+docker logs $(docker ps | grep pyspark_pyspark | awk '{print $NF}') --follow
 
 docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}"
 
