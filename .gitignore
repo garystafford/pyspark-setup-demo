@@ -4,4 +4,6 @@ work/spark-warehouse/
 work/.ipynb_checkpoints/
 work/spark-warehouse/
 work/output/
+work/.empty/
+
 .DS_Store
