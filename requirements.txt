@@ -1,0 +1,7 @@
+jupyter
+pyspark
+psycopg2-binary
+bokeh
+plotly
+numpy
+scipy
