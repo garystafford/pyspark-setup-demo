@@ -11,7 +11,7 @@ Demo of [PySpark](http://spark.apache.org/docs/2.4.0/api/python/pyspark.html) an
 2.  Create `$HOME/data/postgres` directory for PostgreSQL files
 3.  For local development, install Python packages with `pip3 install -r requirements.txt`
 4.  Deploy Docker Stack: `docker stack deploy -c stack.yml pyspark`
-5.  Download 'BreadBasket_DMS.csv' from [kaggle](https://www.kaggle.com/xvivancos/transactions-from-a-bakery) to `work/` directory
+5.  Download ['BreadBasket_DMS.csv'](https://github.com/prasertcbs/basic-dataset/blob/master/BreadBasket_DMS.csv) to `work/` directory
 6.  From the Jupyter terminal, install [Psycopg](http://initd.org/psycopg/docs/install.html#) Python PostgreSQL adapter: `pip install psycopg2-binary`
 
 ## Demo
