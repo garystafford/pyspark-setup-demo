@@ -1,7 +1,7 @@
-jupyter
 pyspark
 psycopg2-binary
 bokeh
 plotly
+chart_studio
 numpy
 scipy

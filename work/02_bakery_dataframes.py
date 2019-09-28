@@ -7,7 +7,7 @@ spark = SparkSession \
     .builder \
     .appName('pyspark_demo_app') \
     .config('spark.driver.extraClassPath',
-            'postgresql-42.2.5.jar') \
+            'postgresql-42.2.8.jar') \
     .getOrCreate()
 
 bakery_schema = StructType([
