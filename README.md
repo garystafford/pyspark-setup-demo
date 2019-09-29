@@ -11,7 +11,8 @@ Demo of [PySpark](http://spark.apache.org/docs/2.4.0/api/python/pyspark.html) an
 2. Create `$HOME/data/postgres` directory for PostgreSQL files
 3. For local development, install Python packages with `pip3 install -r requirements.txt` or `python3 -m pip install -r requirements.txt`
 4. Deploy Docker Stack: `docker stack deploy -c stack.yml pyspark`
-5. <del>Download 'BreadBasket*DMS.csv' from [kaggle](https://www.kaggle.com/xvivancos/transactions-from-a-bakery)</del> to the `work/` subdirectory *(This dataset was recently removed from kaggle. However, a copy is included as part of this project, ['BreadBasket_DMS.csv'](/work/BreadBasket_DMS.csv), or is available elsewhere on GitHub, for example, ['BreadBasket_DMS.csv'](https://github.com/prasertcbs/basic-dataset/blob/master/BreadBasket_DMS.csv). Thanks, [wsargent](https://github.com/wsargent) for this update!)\_
+5. <del>Download 'BreadBasket*DMS.csv' from [kaggle](https://www.kaggle.com/xvivancos/transactions-from-a-bakery)</del> to the `work/` subdirectory
+_*This dataset was recently removed from kaggle. However, a copy is included as part of this project, ['BreadBasket_DMS.csv'](/work/BreadBasket_DMS.csv), or is available elsewhere on GitHub, for example, ['BreadBasket_DMS.csv'](https://github.com/prasertcbs/basic-dataset/blob/master/BreadBasket_DMS.csv). Thanks, [wsargent](https://github.com/wsargent) for this update!_
 6. From the Jupyter terminal, install [Psycopg](http://initd.org/psycopg/docs/install.html#) Python PostgreSQL adapter: `pip install psycopg2-binary`
 
 ## Demo
