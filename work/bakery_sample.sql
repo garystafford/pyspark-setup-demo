@@ -10,8 +10,3 @@ CREATE TABLE "public"."bakery_basket"
     "transaction" integer                                         NOT NULL,
     "item"        character varying(50)                           NOT NULL
 ) WITH (oids = false);
-
-INSERT INTO "bakery_basket" ("date", "time", "transaction", "item", "id")
-VALUES ('2016-10-30', '09:58:11', 1, 'Bread', 1),
-       ('2016-10-30', '10:05:34', 2, 'Scandinavian', 2),
-       ('2016-10-30', '10:07:57', 3, 'Hot chocolate', 3);
