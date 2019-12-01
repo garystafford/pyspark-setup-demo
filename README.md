@@ -7,21 +7,33 @@ Demo of [PySpark](http://spark.apache.org/docs/2.4.0/api/python/pyspark.html) an
 
 ## Set-up
 
-1. `git clone` this project from GitHub
-2. Create `$HOME/data/postgres` directory for PostgreSQL files
-3. For local development, install Python packages with `pip3 install -r requirements.txt` or `python3 -m pip install -r requirements.txt`
-4. Deploy Docker Stack: `docker stack deploy -c stack.yml pyspark`
-5. <del>Download 'BreadBasket*DMS.csv' from [kaggle](https://www.kaggle.com/xvivancos/transactions-from-a-bakery)</del> to the `work/` subdirectory
-_*This dataset was recently removed from kaggle. However, a copy is included as part of this project, ['BreadBasket_DMS.csv'](/work/BreadBasket_DMS.csv), or is available elsewhere on GitHub, for example, ['BreadBasket_DMS.csv'](https://github.com/prasertcbs/basic-dataset/blob/master/BreadBasket_DMS.csv). Thanks, [wsargent](https://github.com/wsargent) for this update!_
-6. From the Jupyter terminal, install [Psycopg](http://initd.org/psycopg/docs/install.html#) Python PostgreSQL adapter: `pip install psycopg2-binary`
+1. Clone this project from GitHub:
+
+    ```bash
+    git clone git clone \
+        --branch master --single-branch --depth 1 --no-tags \
+        https://github.com/garystafford/pyspark-setup-demo.git```
+
+2. Create `$HOME/data/postgres` directory for PostgreSQL files: `mkdir -p ~/data/postgres`
+3. For local development, install Python packages: `python3 -m pip install -r requirements.txt`
+4. Optional, pull images first:
+
+    ```bash
+    docker pull jupyter/all-spark-notebook:latest
+    docker pull postgres:alpine
+    docker pull adminer:latest```
+
+5. Deploy Docker Stack: `docker stack deploy -c stack.yml pyspark`
+6. Retieve the token to log into Jupyter: `docker logs $(docker ps | grep pyspark_pyspark | awk '{print $NF}')`
+7. From the Jupyter terminal, run the install script: `sh install-my-jupyter-libraries.sh`
 
 ## Demo
 
 From a Jupyter terminal window:
 
-1. Sample Python script: `python3 ./01_simple_script.py`
+1. Sample Python script: `python3 01_simple_script.py`
 2. Sample PySpark script: `$SPARK_HOME/bin/spark-submit 02_bakery_dataframes.py`
-3. Load PostgreSQL sample data: `python3 ./03_load_sql.py`
+3. Load PostgreSQL sample data: `python3 03_load_sql.py`
 4. Sample Jupyter Notebook: open `04_pyspark_demo_notebook.ipynb` from Jupyter Console
 
 <img src="https://programmaticponderings.files.wordpress.com/2018/11/pyspark_article_11_notebook.png" alt="Jupyter Notebook" width="800"/>

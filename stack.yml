@@ -1,5 +1,4 @@
-# https://jupyter-docker-stacks.readthedocs.io/en/latest/using/common.html?highlight=root
-# easier to first docker pull jupyter/all-spark-notebook:latest
+# docker stack deploy -c stack.yml postgres
 
 version: "3.7"
 services:
@@ -26,11 +25,11 @@ services:
     volumes:
     - $PWD/work:/home/$USER/work
   postgres:
-    image: postgres:11.3
+    image: postgres:alpine
     environment:
       POSTGRES_USERNAME: postgres
       POSTGRES_PASSWORD: postgres1234
-      POSTGRES_DB: demo
+      POSTGRES_DB: bakery
     ports:
     - "5432:5432/tcp"
     networks:

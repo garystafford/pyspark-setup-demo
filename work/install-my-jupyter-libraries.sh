@@ -1,12 +1,16 @@
 #!/bin/bash
 
 set -x
-# https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-jupyterhub-install-kernels-libs.html#emr-jupyterhub-install-libs
 
-python3 --version
-which python3
+# install required python packages
+python3 -m pip install --user --upgrade pip
+python3 -m pip install -r requirements.txt
 
-sudo python3 -m pip install --user --upgrade pip
-sudo python3 -m pip --version
-
-sudo python3 -m pip install psycopg2-binary bokeh plotly chart_studio numpy scipy pandas
+# download latest postgres driver jar
+POSTGRES_JAR="postgresql-42.2.8.jar"
+if [ -f "$POSTGRES_JAR" ]; then
+    echo "$POSTGRES_JAR exist"
+else
+    wget -nv "https://jdbc.postgresql.org/download/${POSTGRES_JAR}"
+    sudo chown -R ${USER}:users ${POSTGRES_JAR}
+fi

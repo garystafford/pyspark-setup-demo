@@ -5,5 +5,6 @@ work/.ipynb_checkpoints/
 work/spark-warehouse/
 work/output/
 work/.empty/
+work/postgresql-42.2.8.jar
 
 .DS_Store
