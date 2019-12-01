@@ -5,19 +5,21 @@ from pyspark.sql.types import StructType, StructField, StringType, IntegerType
 
 spark = SparkSession \
     .builder \
+    .appName("spark-demo") \
     .getOrCreate()
 
-bakery_schema = StructType([
-    StructField('date', StringType(), True),
-    StructField('time', StringType(), True),
-    StructField('transaction', IntegerType(), True),
-    StructField('item', StringType(), True)
-])
+df_bakery = spark.read \
+    .format("csv") \
+    .option("header", "true") \
+    .option("delimiter", ",") \
+    .option("inferSchema", "true") \
+    .load("BreadBasket_DMS.csv")
 
-df3 = spark.read \
-    .format('csv') \
-    .option('header', 'true') \
-    .load('BreadBasket_DMS.csv', schema=bakery_schema)
+df_sorted = df_bakery.cube("item").count() \
+    .filter("item NOT LIKE 'NONE'") \
+    .orderBy(["count", "item"], ascending=[False, True])
 
-df3.show(10)
-df3.count()
+df_sorted.coalesce(1) \
+    .write.format("csv") \
+    .option("header", "true") \
+    .save("output/items-sold.csv", mode="overwrite")

@@ -34,7 +34,7 @@ Demo of [PySpark](http://spark.apache.org/docs/2.4.0/api/python/pyspark.html) an
 From a Jupyter terminal window:
 
 1. Sample Python script: `python3 01_simple_script.py`
-2. Sample PySpark script: `$SPARK_HOME/bin/spark-submit 02_bakery_dataframes.py`
+2. Sample PySpark script: `time $SPARK_HOME/bin/spark-submit 02_bakery_dataframes.py`
 3. Load PostgreSQL sample data: `python3 03_load_sql.py`
 4. Sample Jupyter Notebook: open `04_pyspark_demo_notebook.ipynb` from Jupyter Console
 
