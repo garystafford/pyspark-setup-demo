@@ -11,8 +11,9 @@ Demo of [PySpark](http://spark.apache.org/docs/2.4.0/api/python/pyspark.html) an
 
     ```bash
     git clone git clone \
-        --branch master --single-branch --depth 1 --no-tags \
-        https://github.com/garystafford/pyspark-setup-demo.git```
+        --branch v2 --single-branch --depth 1 --no-tags \
+        https://github.com/garystafford/pyspark-setup-demo.git
+    ```
 
 2. Create `$HOME/data/postgres` directory for PostgreSQL files: `mkdir -p ~/data/postgres`
 3. For local development, install Python packages: `python3 -m pip install -r requirements.txt`
@@ -21,11 +22,12 @@ Demo of [PySpark](http://spark.apache.org/docs/2.4.0/api/python/pyspark.html) an
     ```bash
     docker pull jupyter/all-spark-notebook:latest
     docker pull postgres:alpine
-    docker pull adminer:latest```
+    docker pull adminer:latest
+    ```
 
 5. Deploy Docker Stack: `docker stack deploy -c stack.yml pyspark`
 6. Retieve the token to log into Jupyter: `docker logs $(docker ps | grep pyspark_pyspark | awk '{print $NF}')`
-7. From the Jupyter terminal, run the install script: `sh install-my-jupyter-libraries.sh`
+7. From the Jupyter terminal, run the install script: `sh bootstrap_jupyter.sh`
 
 ## Demo
 
