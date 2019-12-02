@@ -1,4 +1,4 @@
-# docker stack deploy -c stack.yml postgres
+# docker stack deploy -c stack.yml pyspark
 
 version: "3.7"
 services:
@@ -25,7 +25,7 @@ services:
     volumes:
     - $PWD/work:/home/$USER/work
   postgres:
-    image: postgres:alpine
+    image: postgres:12-alpine
     environment:
       POSTGRES_USERNAME: postgres
       POSTGRES_PASSWORD: postgres1234
@@ -48,6 +48,5 @@ services:
     deploy:
      restart_policy:
        condition: on-failure
-
 networks:
   pyspark-net:

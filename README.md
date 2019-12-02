@@ -45,6 +45,7 @@ From a Jupyter terminal window:
 ```bash
 docker pull jupyter/all-spark-notebook:latest
 docker stack ps pyspark --no-trunc
+docker stack rm pyspark
 docker logs $(docker ps | grep pyspark_pyspark | awk '{print $NF}') --follow
 
 docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}"
