@@ -13,3 +13,6 @@ if [ -f "$POSTGRES_JAR" ]; then
 else
     wget -nv "https://jdbc.postgresql.org/download/${POSTGRES_JAR}"
 fi
+
+# spark-submit logging level to WARN from INFO
+sudo cp log4j.properties /usr/local/spark/conf/log4j.properties

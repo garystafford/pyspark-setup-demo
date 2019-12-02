@@ -1,8 +1,8 @@
-#!/opt/conda/bin/python3
+#!/usr/bin/python3
 
 import random
 
-technologies = ["PySpark", "Python", "Spark", "Scala", "Java", "Project Jupyter", "R"]
+technologies = ['PySpark', 'Python', 'Spark', 'Scala', 'Java', 'Project Jupyter', 'R']
 
 print("Technologies: %s\n" % technologies)
 
