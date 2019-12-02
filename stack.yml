@@ -42,7 +42,7 @@ services:
   adminer:
     image: adminer:latest
     ports:
-    - "8080:8080/tcp"
+    - "8180:8080/tcp"
     networks:
     - pyspark-net
     deploy:
