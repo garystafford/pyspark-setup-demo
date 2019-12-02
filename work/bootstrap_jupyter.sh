@@ -16,3 +16,7 @@ fi
 
 # spark-submit logging level to WARN from INFO
 sudo cp log4j.properties /usr/local/spark/conf/log4j.properties
+
+# update/upgrade and install htop
+sudo apt-get update -y && sudo apt-get upgrade -y
+sudo apt-get install htop
