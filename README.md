@@ -16,12 +16,12 @@ Demo of [PySpark](http://spark.apache.org/docs/2.4.0/api/python/pyspark.html) an
     ```
 
 2. Create `$HOME/data/postgres` directory for PostgreSQL files: `mkdir -p ~/data/postgres`
-3. For local development, install Python packages: `python3 -m pip install -r requirements.txt`
-4. Optional, pull images first:
+3. Optional, for local development, install Python packages: `python3 -m pip install -r requirements.txt`
+4. Optional, pull docker images first:
 
     ```bash
     docker pull jupyter/all-spark-notebook:latest
-    docker pull postgres:alpine
+    docker pull postgres:12-alpine
     docker pull adminer:latest
     ```
 
