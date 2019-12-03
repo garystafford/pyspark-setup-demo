@@ -14,7 +14,7 @@ else
     wget -nv "https://jdbc.postgresql.org/download/${POSTGRES_JAR}"
 fi
 
-# spark-submit logging level to WARN from INFO
+# spark-submit logging level from INFO to WARN
 sudo cp log4j.properties /usr/local/spark/conf/log4j.properties
 
 # update/upgrade and install htop
