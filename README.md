@@ -26,17 +26,24 @@ Demo of [PySpark](http://spark.apache.org/docs/2.4.0/api/python/pyspark.html) an
     ```
 
 5. Deploy Docker Stack: `docker stack deploy -c stack.yml pyspark`
-6. Retieve the token to log into Jupyter: `docker logs $(docker ps | grep pyspark_pyspark | awk '{print $NF}')`
+6. Retrieve the token to log into Jupyter: `docker logs $(docker ps | grep pyspark_pyspark | awk '{print $NF}')`
 7. From the Jupyter terminal, run the install script: `sh bootstrap_jupyter.sh`
+8. Export your Plotly username and api key as environment variables:
+
+    ```bash
+    echo "PLOTLY_USERNAME=your-username" >> .env
+    echo "PLOTLY_API_KEY=your-api-key" >> .env
+    ``` 
 
 ## Demo
 
 From a Jupyter terminal window:
 
-1. Sample Python script: `python3 01_simple_script.py`
-2. Sample PySpark script: `time $SPARK_HOME/bin/spark-submit 02_bakery_dataframes.py`
-3. Load PostgreSQL sample data: `python3 03_load_sql.py`
-4. Sample Jupyter Notebook: open `04_pyspark_demo_notebook.ipynb` from Jupyter Console
+1. Sample Python script, run `python3 01_simple_script.py` from Jupyter terminal
+2. Sample PySpark job, run `$SPARK_HOME/bin/spark-submit 02_bakery_dataframes.py` from Jupyter terminal
+3. Load PostgreSQL sample data, run `python3 03_load_sql.py` from Jupyter terminal
+4. Sample Jupyter Notebook, open `04_pyspark_demo_notebook.ipynb` from Jupyter Console
+5. Sample Jupyter Notebook, open `05_pyspark_demo_notebook.ipynb` from Jupyter Console
 
 <img src="https://programmaticponderings.files.wordpress.com/2018/11/pyspark_article_11_notebook.png" alt="Jupyter Notebook" width="800"/>
 
@@ -46,7 +53,6 @@ From a Jupyter terminal window:
 docker pull jupyter/all-spark-notebook:latest
 docker stack ps pyspark --no-trunc
 docker stack rm pyspark
-docker logs $(docker ps | grep pyspark_pyspark | awk '{print $NF}') --follow
 
 docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}"
 

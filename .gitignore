@@ -2,9 +2,8 @@ venv/
 .idea/
 work/spark-warehouse/
 work/.ipynb_checkpoints/
-work/spark-warehouse/
 work/output/
 work/.empty/
 work/postgresql-42.2.8.jar
-
+work/.env
 **/.DS_Store

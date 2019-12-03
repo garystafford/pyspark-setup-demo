@@ -4,3 +4,4 @@ plotly
 chart_studio
 numpy
 scipy
+python-dotenv
