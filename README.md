@@ -28,7 +28,7 @@ Demo of [PySpark](http://spark.apache.org/docs/2.4.0/api/python/pyspark.html) an
 5. Deploy Docker Stack: `docker stack deploy -c stack.yml pyspark`
 6. Retrieve the token to log into Jupyter: `docker logs $(docker ps | grep pyspark_pyspark | awk '{print $NF}')`
 7. From the Jupyter terminal, run the install script: `sh bootstrap_jupyter.sh`
-8. Export your Plotly username and api key as environment variables:
+8. Export your Plotly username and api key to `.env` file:
 
     ```bash
     echo "PLOTLY_USERNAME=your-username" >> .env
