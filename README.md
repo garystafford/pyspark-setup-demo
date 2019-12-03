@@ -1,4 +1,4 @@
-# PySpark / Jupyter Notebook Demo
+# Jupyter Notebook PySpark Demo
 
 Demo of [PySpark](http://spark.apache.org/docs/2.4.0/api/python/pyspark.html) and [Jupyter Notebook](http://jupyter.org/) with the [Jupyter Docker Stacks](https://jupyter-docker-stacks.readthedocs.io/en/latest/). Complete information for this project can be found by reading the related blog post, [Getting Started with PySpark for Big Data Analytics, using Jupyter Notebooks and Docker
 ](http://wp.me/p1RD28-61V)
@@ -53,7 +53,6 @@ From a Jupyter terminal window:
 docker pull jupyter/all-spark-notebook:latest
 docker stack ps pyspark --no-trunc
 docker stack rm pyspark
-
 docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}"
 
 apt-get update -y && apt-get upgrade -y
