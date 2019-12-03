@@ -25,7 +25,7 @@ with open('BreadBasket_DMS.csv', 'r') as f:
     conn.commit()
 
 # confirm by selecting record
-command = 'SELECT * FROM public.transactions LIMIT 1;'
+command = 'SELECT COUNT(*) FROM public.transactions;'
 cursor.execute(command)
 recs = cursor.fetchall()
 print(recs[0])
