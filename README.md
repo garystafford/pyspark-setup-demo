@@ -40,10 +40,10 @@ Demo of [PySpark](http://spark.apache.org/docs/2.4.0/api/python/pyspark.html) an
 From a Jupyter terminal window:
 
 1. Sample Python script, run `python3 01_simple_script.py` from Jupyter terminal
-2. Sample PySpark job, run `$SPARK_HOME/bin/spark-submit 02_bakery_dataframes.py` from Jupyter terminal
+2. Sample PySpark job, run `$SPARK_HOME/bin/spark-submit 02_pyspark_job.py` from Jupyter terminal
 3. Load PostgreSQL sample data, run `python3 03_load_sql.py` from Jupyter terminal
-4. Sample Jupyter Notebook, open `04_pyspark_demo_notebook.ipynb` from Jupyter Console
-5. Sample Jupyter Notebook, open `05_pyspark_demo_notebook.ipynb` from Jupyter Console
+4. Sample Jupyter Notebook, open `04_notebook.ipynb` from Jupyter Console
+5. Sample Jupyter Notebook, open `05_notebook.ipynb` from Jupyter Console
 
 <img src="https://programmaticponderings.files.wordpress.com/2018/11/pyspark_article_11_notebook.png" alt="Jupyter Notebook" width="800"/>
 

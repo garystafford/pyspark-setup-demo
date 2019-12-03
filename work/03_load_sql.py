@@ -3,7 +3,7 @@
 import psycopg2
 
 # connect to database
-connect_str = 'host=postgres port=5432 dbname=bakery user=postgres password=postgres1234'  # Docker
+connect_str = 'host=postgres port=5432 dbname=bakery user=postgres password=postgres1234'
 conn = psycopg2.connect(connect_str)
 conn.autocommit = True
 cursor = conn.cursor()
@@ -28,4 +28,4 @@ with open('BreadBasket_DMS.csv', 'r') as f:
 command = 'SELECT COUNT(*) FROM public.transactions;'
 cursor.execute(command)
 recs = cursor.fetchall()
-print(recs[0])
+print('Row count: %d' % recs[0])
