@@ -25,8 +25,8 @@ Demo of [PySpark](http://spark.apache.org/docs/2.4.0/api/python/pyspark.html) an
     docker pull adminer:latest
     ```
 
-5. Deploy Docker Stack: `docker stack deploy -c stack.yml pyspark`
-6. Retrieve the token to log into Jupyter: `docker logs $(docker ps | grep pyspark_pyspark | awk '{print $NF}')`
+5. Deploy Docker Stack: `docker stack deploy -c stack.yml jupyter`
+6. Retrieve the token to log into Jupyter: `docker logs $(docker ps | grep jupyter_spark | awk '{print $NF}')`
 7. From the Jupyter terminal, run the install script: `sh bootstrap_jupyter.sh`
 8. Export your Plotly username and api key to `.env` file:
 
@@ -51,8 +51,8 @@ From a Jupyter terminal window:
 
 ```bash
 docker pull jupyter/all-spark-notebook:latest
-docker stack ps pyspark --no-trunc
-docker stack rm pyspark
+docker stack ps jupyter --no-trunc
+docker stack rm jupyter
 docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}"
 
 apt-get update -y && apt-get upgrade -y

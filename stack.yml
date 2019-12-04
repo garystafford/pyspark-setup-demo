@@ -1,14 +1,17 @@
-# docker stack deploy -c stack.yml pyspark
+# docker stack deploy -c stack.yml jupyter
 
 version: "3.7"
+networks:
+  demo-net:
+
 services:
-  pyspark:
+  spark:
     image: jupyter/all-spark-notebook:latest
     ports:
     - "8888:8888/tcp"
     - "4040:4040/tcp"
     networks:
-    - pyspark-net
+    - demo-net
     working_dir: /home/$USER/work
     environment:
       CHOWN_HOME: "yes"
@@ -33,7 +36,7 @@ services:
     ports:
     - "5432:5432/tcp"
     networks:
-    - pyspark-net
+    - demo-net
     volumes:
     - $HOME/data/postgres:/var/lib/postgresql/data
     deploy:
@@ -44,9 +47,7 @@ services:
     ports:
     - "8180:8080/tcp"
     networks:
-    - pyspark-net
+    - demo-net
     deploy:
      restart_policy:
        condition: on-failure
-networks:
-  pyspark-net:
