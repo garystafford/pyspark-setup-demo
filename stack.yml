@@ -51,3 +51,15 @@ services:
     deploy:
      restart_policy:
        condition: on-failure
+#  pgadmin:
+#    image: dpage/pgadmin4:latest
+#    environment:
+#      PGADMIN_DEFAULT_EMAIL: user@domain.com
+#      PGADMIN_DEFAULT_PASSWORD: 5up3rS3cr3t!
+#    ports:
+#      - "81:80/tcp"
+#    networks:
+#      - demo-net
+#    deploy:
+#      restart_policy:
+#        condition: on-failure

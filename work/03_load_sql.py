@@ -21,7 +21,12 @@ for command in sqlCommands:
 # import data from csv file
 with open('BreadBasket_DMS.csv', 'r') as f:
     next(f)  # Skip the header row.
-    cursor.copy_from(f, 'transactions', sep=',', columns=('date', 'time', 'transaction', 'item'))
+    cursor.copy_from(
+        f,
+        'transactions',
+        sep=',',
+        columns=('date', 'time', 'transaction', 'item')
+    )
     conn.commit()
 
 # confirm by selecting record

@@ -2,7 +2,9 @@
 
 import random
 
-technologies = ['PySpark', 'Python', 'Spark', 'Scala', 'Java', 'Project Jupyter', 'R']
+technologies = [
+    'PySpark', 'Python', 'Spark', 'Scala', 'Java', 'Project Jupyter', 'R'
+]
 
 print("Technologies: %s\n" % technologies)
 
