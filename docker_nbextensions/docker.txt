@@ -1,0 +1,1 @@
+docker build -t garystafford/all-spark-notebook-nbext:latest .
