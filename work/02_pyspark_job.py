@@ -16,6 +16,7 @@ df_bakery = spark.read \
 
 df_sorted = df_bakery.cube('item').count() \
     .filter('item NOT LIKE \'NONE\'') \
+    .filter('item NOT LIKE \'Adjustment\'') \
     .orderBy(['count', 'item'], ascending=[False, True])
 
 df_sorted.show(10, False)
