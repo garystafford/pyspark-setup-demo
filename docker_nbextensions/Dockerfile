@@ -6,7 +6,6 @@ RUN         pip install jupyter_contrib_nbextensions \
                 && jupyter contrib nbextension install --system \
                 && pip install jupyter_nbextensions_configurator \
                 && jupyter nbextensions_configurator enable --system \
-                && jupyter nbextension enable codefolding/main \
-                && pip install yapf
+                && pip install yapf # for code pretty
 
 USER        $NB_UID
