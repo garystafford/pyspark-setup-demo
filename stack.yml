@@ -45,7 +45,7 @@ services:
   adminer:
     image: adminer:latest
     ports:
-    - "8180:8080/tcp"
+    - "8080:8080/tcp"
     networks:
     - demo-net
     deploy:
