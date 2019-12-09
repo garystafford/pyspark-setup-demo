@@ -48,22 +48,9 @@ From a Jupyter terminal window:
 
 <img src="https://programmaticponderings.files.wordpress.com/2018/11/pyspark_article_11_notebook.png" alt="Jupyter Notebook" width="800"/>
 
-## Misc. Commands
+## Architecture
 
-```bash
-docker pull jupyter/all-spark-notebook:latest
-docker stack ps jupyter --no-trunc
-docker stack rm jupyter
-docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}"
-
-apt-get update -y && apt-get upgrade -y
-apt-get install htop
-htop --sort-key help
-htop --sort-key
-
-# optional from Jupyter terminal if not part of SparkSession spark.driver.extraClassPath
-cp postgresql-42.2.8.jar /usr/local/spark/jars
-```
+![Architecture](https://programmaticponderings.files.wordpress.com/2019/12/jupyterdiagram.png)
 
 ## References
 
