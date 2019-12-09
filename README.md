@@ -3,7 +3,9 @@
 Demo of [PySpark](http://spark.apache.org/docs/2.4.0/api/python/pyspark.html) and [Jupyter Notebook](http://jupyter.org/) with the [Jupyter Docker Stacks](https://jupyter-docker-stacks.readthedocs.io/en/latest/). Complete information for this project can be found by reading the related blog post, [Getting Started with PySpark for Big Data Analytics, using Jupyter Notebooks and Docker
 ](http://wp.me/p1RD28-61V)
 
-<img src="https://programmaticponderings.files.wordpress.com/2018/11/pysparkdocker1.png" alt="Architecture" width="700"/>
+## Architecture
+
+![Architecture](https://programmaticponderings.files.wordpress.com/2019/12/jupyterdiagram.png)
 
 ## Set-up
 
@@ -47,10 +49,6 @@ From a Jupyter terminal window:
 6. Try the alternate Jupyter stack with [nbextensions](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html) pre-installed: `docker build -t garystafford/all-spark-notebook-nbext:latest .`
 
 <img src="https://programmaticponderings.files.wordpress.com/2018/11/pyspark_article_11_notebook.png" alt="Jupyter Notebook" width="800"/>
-
-## Architecture
-
-![Architecture](https://programmaticponderings.files.wordpress.com/2019/12/jupyterdiagram.png)
 
 ## References
 
