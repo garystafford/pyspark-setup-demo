@@ -12,7 +12,7 @@ Demo of [PySpark](http://spark.apache.org/docs/2.4.0/api/python/pyspark.html) an
 1. Clone this project from GitHub:
 
     ```bash
-    git clone git clone \
+    git clone \
         --branch v2 --single-branch --depth 1 --no-tags \
         https://github.com/garystafford/pyspark-setup-demo.git
     ```
