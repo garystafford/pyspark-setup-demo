@@ -47,7 +47,7 @@ From a Jupyter terminal window:
 4. Sample Jupyter Notebook, open `04_notebook.ipynb` from Jupyter Console
 5. Sample Jupyter Notebook, open `05_notebook.ipynb` from Jupyter Console
 6. Try the alternate Jupyter stack with [nbextensions](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html) pre-installed, first `cd docker_nbextensions/`, then run `docker build -t garystafford/all-spark-notebook-nbext:latest .` to build the new image
-7. Then, to delete the previous stack, run `docker stack rm jupyter`, followed by creating the new stack, run `cd -` and `docker stack deploy -c stack-nbext.yml jupyter-nbext`
+7. Then, to delete the previous stack, run `docker stack rm jupyter`, followed by creating the new stack, run `cd -` and `docker stack deploy -c stack-nbext.yml jupyter`
 
 <img src="https://programmaticponderings.files.wordpress.com/2018/11/pyspark_article_11_notebook.png" alt="Jupyter Notebook" width="800"/>
 
