@@ -7,7 +7,7 @@ python3 -m pip install --user --upgrade pip
 python3 -m pip install -r requirements.txt --upgrade
 
 # download latest postgres driver jar
-POSTGRES_JAR="postgresql-42.2.8.jar"
+POSTGRES_JAR="postgresql-42.2.10.jar"
 if [ -f "$POSTGRES_JAR" ]; then
     echo "$POSTGRES_JAR exist"
 else
