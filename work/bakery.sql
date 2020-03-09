@@ -4,7 +4,7 @@ CREATE SEQUENCE transactions_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 S
 
 CREATE TABLE "public"."transactions"
 (
-    "id"          integer DEFAULT nextval('transactions_id_seq') NOT NULL,
+    "id"          integer DEFAULT nextval('transactions_id_seq')  NOT NULL,
     "date"        character varying(10)                           NOT NULL,
     "time"        character varying(8)                            NOT NULL,
     "transaction" integer                                         NOT NULL,
