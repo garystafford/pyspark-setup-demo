@@ -1,9 +1,8 @@
 # docker stack deploy -c stack.yml jupyter
-
+# optional pgadmin container
 version: "3.7"
 networks:
   demo-net:
-
 services:
   spark:
     image: jupyter/all-spark-notebook:latest
@@ -51,15 +50,15 @@ services:
     deploy:
      restart_policy:
        condition: on-failure
-#  pgadmin:
-#    image: dpage/pgadmin4:latest
-#    environment:
-#      PGADMIN_DEFAULT_EMAIL: user@domain.com
-#      PGADMIN_DEFAULT_PASSWORD: 5up3rS3cr3t!
-#    ports:
-#      - "81:80/tcp"
-#    networks:
-#      - demo-net
-#    deploy:
-#      restart_policy:
-#        condition: on-failure
+  # pgadmin:
+  #   image: dpage/pgadmin4:latest
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: user@domain.com
+  #     PGADMIN_DEFAULT_PASSWORD: 5up3rS3cr3t!
+  #   ports:
+  #     - "8180:80/tcp"
+  #   networks:
+  #     - demo-net
+  #   deploy:
+  #     restart_policy:
+  #       condition: on-failure
