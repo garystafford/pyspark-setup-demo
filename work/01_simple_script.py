@@ -2,13 +2,11 @@
 
 import random
 
-technologies = [
-    'PySpark', 'Python', 'Spark', 'Scala', 'Java', 'Project Jupyter', 'R'
-]
+technologies = [ 'PySpark', 'Python', 'Spark', 'Scala', 'Java', 'Project Jupyter', 'R' ]
 
-print("Technologies: %s\n" % technologies)
+print(f"Technologies: {technologies}")
 
 technologies.sort()
-print("Sorted: %s\n" % technologies)
+print(f"Sorted: {technologies}")
 
-print("I'm interested in learning about %s." % random.choice(technologies))
+print(f"I'm interested in learning about {random.choice(technologies)}.")
